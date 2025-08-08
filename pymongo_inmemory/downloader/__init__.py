@@ -81,7 +81,7 @@ def _extract_tar(tar_file, extracted_folder):
         logger.info("Starting extraction.")
         for f in t.getnames():
             logger.debug("Extracting {} to {}".format(f, extracted_folder))
-            t.extract(f, extracted_folder)
+            t.extract(f, extracted_folder, filter="data")
             logger.debug("Done extracting {}".format(f))
         logger.info("Extractiong finished.")
 
